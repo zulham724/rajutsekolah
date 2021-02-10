@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\v1\ProductController;
 use App\Http\Controllers\API\v1\ProductCategoryController;
+use App\Http\Controllers\API\v1\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResources([
     'product'=>ProductController::class,
-    'productcategory'=>ProductCategoryController::class
+    'productcategory'=>ProductCategoryController::class,
+    'setting'=>SettingController::class
 ]);
